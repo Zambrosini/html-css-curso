@@ -1,0 +1,10 @@
+altura = height
+largura = width
+borda = border
+espaço entre a caixa e a border = padding
+espaço externo na border = margin
+contorno fora do elemento = outline
+tipo de caixa que cria na linha de baixo e ocupa 100% da largura do browser - box-level exemplos : div, h1-h6, p, main, etc
+tipo de caixa que cria uma linha no mesmo paragrafo - inline-level exemplos : span, a, code, small, Strong, em, etc
+user agente - é o utilizador
+

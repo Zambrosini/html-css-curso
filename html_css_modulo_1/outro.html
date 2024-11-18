@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Moderno</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="login-wrapper">
+    <div class="login-container">
+      <h2>Bem-vindo de volta!</h2>
+      <form action="/login" method="POST">
+        <div class="input-group">
+          <label for="username">Email ou Nome de Usuário</label>
+          <input type="text" id="username" name="username" placeholder="Insira seu e-mail ou nome de usuário" required>
+        </div>
+
+        <div class="input-group">
+          <label for="password">Senha</label>
+          <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+          <span class="toggle-password" onclick="togglePassword()">👁️</span>
+        </div>
+
+        <div class="options">
+          <label>
+            <input type="checkbox" id="remember-me" name="remember-me">
+            Lembrar-me
+          </label>
+          <a href="/forgot-password" class="forgot-password">Esqueceu a senha?</a>
+        </div>
+
+        <button type="submit" class="login-button">Entrar</button>
+
+        <div class="divider">
+          <span>ou</span>
+        </div>
+
+        <div class="social-login">
+          <button class="google-login">Login com Google</button>
+          <button class="facebook-login">Login com Facebook</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function togglePassword() {
+      const passwordField = document.getElementById("password");
+      passwordField.type = passwordField.type === "password" ? "text" : "password";
+    }
+  </script>
+</body>
+</html>
