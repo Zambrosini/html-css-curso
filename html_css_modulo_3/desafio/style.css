@@ -1,0 +1,36 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+header{
+    font-size: 70px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding-bottom: 130px;
+}
+
+header h1{
+    padding-top: 100px;
+}
+
+header > p{
+    font-size: 20px;
+    padding-top: 20px;
+
+}
+
+section p {
+    padding-top: 20px;
+}
+
+footer{
+    background-color: black;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+}
+footer > p {
+    padding: 10px;
+}
