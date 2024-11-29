@@ -4,21 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Media Query</title>
+
     <link rel="stylesheet" href="estilos/style.css">
 </head>
 <body>
     <header>
         <h1>Meu site</h1>
-        <menu>
-            <ul>
-                <li><a href="#">opção 1</a></li>
-                <li><a href="#">opção 2</a></li>
-                <li><a href="#">opção 3</a></li>
-                <li><a href="#">opção 4</a></li>
-                <li><a href="#">opção 5</a></li>
-
+        <nav class="navbar">
+            <div class="menu-toggle" id="menu-toggle">
+                <!-- Ícone de menu (três traços) -->
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#services">Serviços</a></li>
+                <li><a href="#contact">Contato</a></li>
             </ul>
-        </menu>
+        </nav>
+        <script src="script.js"></script>
     </header>
     <main>
         <article>
@@ -30,6 +36,14 @@
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe, est. Earum ullam sit vel aspernatur architecto, accusamus officia nam ipsa corrupti. Tenetur, amet corporis! Distinctio accusamus maxime temporibus placeat natus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse vero nesciunt expedita, rem doloribus quia, accusamus exercitationem veritatis minima sapiente ut nobis voluptatem, repellat temporibus quae dolorem? Officiis, sapiente accusamus!</p>
         </article>
     </main>
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const menu = document.querySelector('.menu');
 
+        // Adiciona um evento de clique ao botão de menu
+        menuToggle.addEventListener('click', () => {
+            menu.classList.toggle('active'); // Alterna a classe "active" no menu
+        });
+    </script>
 </body>
 </html>

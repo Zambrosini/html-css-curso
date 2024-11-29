@@ -1,47 +1,95 @@
 @charset "UTF-8";
 
-*{
+* {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0px;
     padding: 0px;
 }
 
-body, html{
+body, html {
     background-color: lightgrey;
 }
 
-header{
+header {
     background-color: rgb(148, 146, 146);
 }
 
-header > h1{
+header > h1 {
     text-align: center;
 }
 
-menu{
-    display: block;
-
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
 }
 
-menu > ul{
-    list-style-type: none;
+/* Container para o menu hamburguer e o texto */
+.menu-container {
+    display: flex;
+    flex-direction: column; /* Empilha o ícone e o texto verticalmente */
+    align-items: center; /* Centraliza horizontalmente os itens no container */
+    gap: 5px; /* Espaçamento entre o ícone e o texto */
 }
 
-menu > ul > li > a{
-    display: block;
-    padding: 10px;
-    text-decoration: none;
-    background-color: rgb(88, 85, 85);
+/* Ícone de menu (três traços) */
+.menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.bar {
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Texto abaixo do menu hamburguer */
+.menu-text {
     color: white;
-    text-align: center;
-    border-top: 2px solid gray;
+    font-size: 12px;
 }
 
-menu > ul > li > a:hover{
-    background-color: gray;
+/* Estilos para o menu */
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none; /* Esconde o menu no mobile */
+    flex-direction: column; /* Alinha os itens verticalmente */
 }
 
-main{
+.menu li {
+    margin: 10px 0;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+}
+
+.menu li a:hover {
+    background-color: white;
+    transition: 0.8s;
+    color: black;
+}
+
+/* Quando o menu está ativo */
+.menu.active {
+    display: flex; /* Mostra o menu */
+}
+
+/* Responsividade para desktop */
+
+main {
     width: 90vw;
     background-color: white;
     margin: auto;
@@ -50,11 +98,11 @@ main{
     margin-top: 10px;
 }
 
-article > h2{
+article > h2 {
     padding-bottom: 20px;
 }
 
-article > p{
+article > p {
     text-align: justify;
     margin-bottom: 20px;
     text-indent: 20px;
